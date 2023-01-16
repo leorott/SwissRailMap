@@ -1,8 +1,12 @@
 <template>
-  <slot></slot>
+  <Navbar />
+  <div class="container">
+    <slot></slot>
+  </div>
 </template>
 <script setup>
 import { useHead } from '#head';
+import Navbar from "~/components/Navbar.vue";
 // add bootstrap from cdn
 useHead({
   script: [
