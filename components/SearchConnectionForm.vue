@@ -24,7 +24,11 @@ interface ConnectionForm {
 
 const from = ref<string>('')
 const to = ref<string>('')
-const dateTime = ref<string>('');
+const dateTime = ref<string>(
+    new Date().toISOString()
+        .split(".")[0]
+        .slice(0, -3)
+);
 
 const connectionForm = computed<ConnectionForm>(() => {
   return {
