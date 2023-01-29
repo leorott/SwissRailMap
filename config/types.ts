@@ -47,13 +47,13 @@ export interface ConnectionStation {
 
 export interface Station {
     id: number,
-    corrdinates: Corrdinates
+    coordinate: Coordinate
     distance: any,
     name: string,
     score: any,
 }
 
-export interface Corrdinates {
+export interface Coordinate {
     type: string,
     x: number,
     y: number,
