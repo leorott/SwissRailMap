@@ -10,11 +10,29 @@ export interface Connection {
     duration: number,
     from: ConnectionStation,
     products: string[],
-    sections: any,
+    sections: Section[],
     service: any,
     to: ConnectionStation,
 }
 
+interface Section {
+    departure: ConnectionStation,
+    arrival: ConnectionStation,
+    journey: Journey
+}
+
+interface Journey {
+    capacity1st?: number,
+    capacity2st?: number,
+    category: string,
+    categoryCode: any,
+    name: any,
+    number: string,
+    operator: string,
+    passList: ConnectionStation[],
+    subcategory: any,
+    to: string,
+}
 export interface ConnectionStation {
     arrival: any,
     arrivalTimestamp: any,
