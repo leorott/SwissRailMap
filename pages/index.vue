@@ -27,13 +27,12 @@
         </tr>
         <tr :ref="(el) => { connectionDetail.push(el)}" class="d-none">
           <td colspan="4">
-            <div>
-              <p>TODO: display connection details here</p>
-            </div>
+            hi
+            <ConnectionDetails :connection="connection"/>
           </td>
         </tr>
       </template>
-      </tbody>xx
+      </tbody>
     </table>
   </div>
 </template>
