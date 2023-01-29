@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>Verbindung suchen</h1>
-    <search-connection-form @search="(e) => searchConnections(e.from.value, e.to.value, e.dateTime.value)"/>
+    <SearchConnectionForm @search="(e) => searchConnections(e.from.value, e.to.value, e.dateTime.value)"/>
     <table class="table" v-if="connectionsResponse">
       <thead>
       <tr>
@@ -22,7 +22,6 @@
             <button type="button" class="btn btn-primary" @click="toggleDetails(index)">
               mehr infos
             </button>
-            <!-- connection.sections            -->
           </td>
         </tr>
         <tr :ref="(el) => { connectionDetail.push(el)}" class="d-none">
